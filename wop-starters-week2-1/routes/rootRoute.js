@@ -5,13 +5,13 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  console.log('root route with req:');
+  console.log('rootRoute: root route with req:');
   res.send('test get');
 });
 
 router.post('/', (req, res) => {
   res.send('test post');
-  console.log(req.body);
+  console.log('rootRoute: ' + req.body);
 });
 
 router.put('/', (req, res) => {
