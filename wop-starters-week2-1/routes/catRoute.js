@@ -6,8 +6,6 @@ const catController = require('../controllers/catController')
 
 router.get('/', catController.cat_list_get);
 
-router.get('/:id' , (req,res) =>{
-  res.send(`You requested a cat whose id is ${req.params.id}.`)
-})
+router.get('/:id' , catController.cat_get_by_id);
 
 module.exports = router;
