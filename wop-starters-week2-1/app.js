@@ -1,8 +1,8 @@
 'use strict';
 const express = require('express');
 const bodyParser = require('body-parser');
-const rootRoute = require('./routes/rootRoute.js');
-const catRoute = require('./routes/catRoute.js');
+const rootRoute = require('./routes/rootRoute');
+const catRoute = require('./routes/catRoute');
 const app = express();
 const port = 3000;
 
