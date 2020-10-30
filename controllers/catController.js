@@ -23,8 +23,21 @@ const cat_create = async (req, res) => {
   res.send(cat);
 };
 
+const cat_update = async (req,res) => {
+  const updateOk = await catModel.updateCat();
+  res.send('cat updated')
+}
+
+const cat_delete = async (req,res) => {
+
+  res.send('deleted')
+}
+
+
 module.exports = {
   cat_list_get,
   cat_create,
   cat_get_by_id,
+  cat_update,
+  cat_delete
 };

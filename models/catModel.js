@@ -26,12 +26,35 @@ const getCat = async (id) => {
 
 const insertCat = async (req) => {
   try {
-    const [rows, fields] = await promisePool.query(
+    const [rows, fields] = await promisePool.execute(
         'INSERT INTO wop_cat (name,age,weight,owner,filename) VALUES (?,?,?,?,?);',
-        [req.body.name, req.body.age, req.body.weight, req.body.owner,
-        req.body.name]);
+        [
+          req.body.name, req.body.age, req.body.weight, req.body.owner,
+          req.body.name]);
     console.log('catModel insert', rows, fields);
     return rows.insertId;
+  }
+  catch (e) {
+    console.log(e);
+  }
+};
+
+const updateCat = async (id, req) => {
+  try {
+    const [rows] = await promisePool.query(
+        'UPDATE wop_cat SET name = ?, age = ?, weight = ? WHERE cat_id = ?;',
+        [req.body.name, req.body.age, req.body.weight, id]);
+    console.log('catModel update', rows);
+    return rows.affectedRows === 1;
+  }
+  catch (e) {
+    console.log(e);
+  }
+};
+
+const deleteCat = async (id, req) => {
+  try {
+
   }
   catch (e) {
     console.log(e);
@@ -42,5 +65,7 @@ module.exports = {
   getAllCats,
   getCat,
   insertCat,
+  updateCat,
+  deleteCat,
 };
 
