@@ -20,22 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ec4bd1f-94c9-4374-b327-bc57d530151c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/balloon/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/balloon/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/balloon/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mousetrail/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mousetrail/js.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mousetrail/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tabs/js.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tabs/tabs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../wop-starters-week2-1/controllers/userController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../wop-starters-week2-1/routes/userRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wop-starters-week2-1/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wop-starters-week2-1/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wop-starters-week2-1/controllers/catController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wop-starters-week2-1/controllers/catController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wop-starters-week2-1/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wop-starters-week2-1/controllers/userController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wop-starters-week2-1/models/catModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wop-starters-week2-1/models/catModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wop-starters-week2-1/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../wop-starters-week2-1/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wop-starters-week2-1/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../wop-starters-week2-1/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wop-starters-week2-1/routes/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../wop-starters-week2-1/routes/userRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,9 +57,9 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -82,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603971426358</updated>
-      <workItem from="1603971427394" duration="8949000" />
+      <workItem from="1603971427394" duration="13656000" />
     </task>
     <servers />
   </component>
@@ -101,6 +94,14 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="394" y="457" key="FileChooserDialogImpl" timestamp="1603989058250">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="394" y="457" key="FileChooserDialogImpl/0.0.2560.1400/-1858.0.1858.1080@0.0.2560.1400" timestamp="1603989058250" />
+    <state x="115" y="347" key="SettingsEditor" timestamp="1603987490240">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="115" y="347" key="SettingsEditor/0.0.2560.1400/-1858.0.1858.1080@0.0.2560.1400" timestamp="1603987490240" />
     <state x="303" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1603972348478">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

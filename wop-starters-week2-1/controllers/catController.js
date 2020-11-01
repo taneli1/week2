@@ -1,25 +1,39 @@
 'use strict';
-// catController
 
-const catModel = require('../models/catMOdel');
+const catModel = require('../models/catModel');
+const cats = catModel;
 
-const cats = catModel.cats;
-
-const cat_list_get = (req,res) => {
+const cat_list_get = async (req, res) => {
+  const cats = await catModel.getAllCats();
   res.json(cats);
 };
 
-const cat_get_by_id = (req,res) => {
-  res.json(cats.filter(i => i.id === req.params.id));
+const cat_get_by_id = async (req, res) => {
+  const cat = await catModel.getCat(req.params.id);
+  res.json(cat);
 };
 
-const cat_create = (req,res) => {
-  // Create a cat with data coming from req...
-  res.send(`cat created with id: ...`);
+const cat_create = async (req, res) => {
+  console.log('cat_create', req.body, req.file);
+  const cat = await catModel.getCat(await catModel.insertCat(req));
+  res.send(cat);
+};
+
+const cat_update = async (req, res) => {
+  console.log(req.body)
+  const updateOk = await catModel.updateCat(req.params.id, req);
+  res.send(updateOk);
+};
+
+const cat_delete = async (req, res) => {
+  const del = await catModel.deleteCat(req.params.id);
+  res.send(del);
 };
 
 module.exports = {
   cat_list_get,
   cat_create,
-  cat_get_by_id
+  cat_get_by_id,
+  cat_update,
+  cat_delete,
 };

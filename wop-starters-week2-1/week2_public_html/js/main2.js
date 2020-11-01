@@ -30,7 +30,7 @@ const createCatCards = (cats) => {
     p2.innerHTML = `Weight: ${cat.weight}kg`;
 
     const p3 = document.createElement('p');
-    p3.innerHTML = `Owner: ${cat.ownername}`;
+    p3.innerHTML = `Owner: ${cat.owner}`;
 
     // add selected cat's values to modify form
     const modButton = document.createElement('button');
@@ -135,7 +135,9 @@ addForm.addEventListener('submit', async (evt) => {
 // submit modify form
 modForm.addEventListener('submit', async (evt) => {
   evt.preventDefault();
+
   const data = serializeJson(modForm);
+
   const fetchOptions = {
     method: 'PUT', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
@@ -152,7 +154,8 @@ modForm.addEventListener('submit', async (evt) => {
 
   console.log(fetchOptions);
   const response = await fetch(url + '/cat', fetchOptions);
-  const json = await response.json();
+  const json = await response;
+
   console.log('modify response', json);
   getCat();
 });
