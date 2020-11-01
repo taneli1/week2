@@ -1,10 +1,10 @@
 'use strict';
+
 const pool = require('../database/db.js');
 const promisePool = pool.promise();
 
 const getAllCats = async () => {
   try {
-    // TODO: do the LEFT (or INNER) JOIN to get owner name too.
     const [rows] = await promisePool.query('SELECT * FROM wop_cat');
     return rows;
   }
@@ -26,11 +26,11 @@ const getCat = async (id) => {
 
 const insertCat = async (req) => {
   try {
-    const [rows, fields] = await promisePool.execute(
+    const [rows, fields] = await promisePool.query(
         'INSERT INTO wop_cat (name,age,weight,owner,filename) VALUES (?,?,?,?,?);',
         [
           req.body.name, req.body.age, req.body.weight, req.body.owner,
-          req.body.name]);
+          req.file.filename]);
     console.log('catModel insert', rows, fields);
     return rows.insertId;
   }
@@ -41,7 +41,7 @@ const insertCat = async (req) => {
 
 const updateCat = async (id, req) => {
   try {
-    const [rows] = await promisePool.query(
+    const [rows] = await promisePool.execute(
         'UPDATE wop_cat SET name = ?, age = ?, weight = ? WHERE cat_id = ?;',
         [req.body.name, req.body.age, req.body.weight, id]);
     console.log('catModel update', rows);
