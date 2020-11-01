@@ -135,7 +135,9 @@ addForm.addEventListener('submit', async (evt) => {
 // submit modify form
 modForm.addEventListener('submit', async (evt) => {
   evt.preventDefault();
+
   const data = serializeJson(modForm);
+
   const fetchOptions = {
     method: 'PUT', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
@@ -152,7 +154,8 @@ modForm.addEventListener('submit', async (evt) => {
 
   console.log(fetchOptions);
   const response = await fetch(url + '/cat', fetchOptions);
-  const json = await response.json();
+  const json = await response;
+
   console.log('modify response', json);
   getCat();
 });

@@ -20,12 +20,14 @@ const cat_create = async (req, res) => {
 };
 
 const cat_update = async (req, res) => {
+  console.log(req.body)
   const updateOk = await catModel.updateCat(req.params.id, req);
   res.send(updateOk);
 };
 
 const cat_delete = async (req, res) => {
-  res.send('deleted');
+  const del = await catModel.deleteCat(req.params.id);
+  res.send(del);
 };
 
 module.exports = {

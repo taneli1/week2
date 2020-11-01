@@ -41,9 +41,10 @@ const insertCat = async (req) => {
 
 const updateCat = async (id, req) => {
   try {
+    console.log(`??? + ${req.body.name + req.body.age + req.body.weight + req.body.owner + id}`)
     const [rows] = await promisePool.execute(
-        'UPDATE wop_cat SET name = ?, age = ?, weight = ? WHERE cat_id = ?;',
-        [req.body.name, req.body.age, req.body.weight, id]);
+        'UPDATE wop_cat SET name = ?, age = ?, weight = ?, owner = ? WHERE cat_id = ?;',
+        [req.body.name, req.body.age, req.body.weight, req.body.owner, id]);
     console.log('catModel update', rows);
     return rows.affectedRows === 1;
   }
@@ -54,9 +55,9 @@ const updateCat = async (id, req) => {
 
 const deleteCat = async (id) => {
   try {
-
     const [rows] = await promisePool.execute(
-        'DELETE wop'
+        'DELETE FROM wop_cat WHERE cat_id = ?;',
+        [id]
     )
   }
   catch (e) {
