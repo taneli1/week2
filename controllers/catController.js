@@ -20,8 +20,8 @@ const cat_create = async (req, res) => {
 };
 
 const cat_update = async (req, res) => {
-  const updateOk = await catModel.updateCat();
-  res.send('cat updated');
+  const updateOk = await catModel.updateCat(req.params.id, req);
+  res.send(updateOk);
 };
 
 const cat_delete = async (req, res) => {

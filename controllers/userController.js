@@ -20,7 +20,7 @@ const user_create = async (req, res) => {
 };
 
 const user_update = async (req, res) => {
-  const updateOk = await userModel.updateUser();
+  const updateOk = await userModel.updateUser(req);
   res.send('user updated');
 };
 

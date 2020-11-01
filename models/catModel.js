@@ -52,9 +52,12 @@ const updateCat = async (id, req) => {
   }
 };
 
-const deleteCat = async (id, req) => {
+const deleteCat = async (id) => {
   try {
 
+    const [rows] = await promisePool.execute(
+        'DELETE wop'
+    )
   }
   catch (e) {
     console.log(e);

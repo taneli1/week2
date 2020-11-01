@@ -1,11 +1,15 @@
 'use strict';
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const rootRoute = require('./routes/rootRoute');
 const catRoute = require('./routes/catRoute');
 const userRoute = require('./routes/userRoute');
 const app = express();
 const port = 3000;
+
+
+app.use(cors())
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/', rootRoute);
