@@ -29,7 +29,6 @@ const cat_update = async (req,res) => {
 }
 
 const cat_delete = async (req,res) => {
-
   res.send('deleted')
 }
 
